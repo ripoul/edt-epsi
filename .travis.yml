@@ -1,12 +1,21 @@
 dist: xenial
 language: python
 python:
-  - "3.6"
-  - "3.7"
+- '3.6'
+- '3.7'
 cache: pip
-
 install:
-  - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
-  - black --check --verbose edt/*.py edtEPSI/*py *.py
+- black --check --verbose edt/*.py edtEPSI/*py *.py
+deploy:
+  provider: gae
+  keyfile: "EPSI-EDT-9e6b32e76a96.json"
+  project: "epsi-edt"
+  on:
+    branch: master
+    python: "3.7"
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_9a2783f063c6_key -iv $encrypted_9a2783f063c6_iv
+  -in EPSI-EDT-9e6b32e76a96.json.enc -out EPSI-EDT-9e6b32e76a96.json -d
