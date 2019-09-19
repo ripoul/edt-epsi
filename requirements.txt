@@ -6,12 +6,14 @@ certifi==2019.9.11
 chardet==3.0.4
 Click==7.0
 Django==2.2.5
+google-api-core==1.14.2
 google-auth==1.6.3
 google-cloud-core==1.0.3
 google-cloud-firestore==1.4.0
 google-cloud-storage==1.19.0
 google-resumable-media==0.4.0
 googleapis-common-protos==1.6.0
+gunicorn==19.9.0
 idna==2.8
 protobuf==3.9.1
 pyasn1==0.4.7
