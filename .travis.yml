@@ -7,7 +7,7 @@ cache: pip
 install:
 - pip install -r requirements.txt
 script:
-- black --check --verbose edt/*.py edtEPSI/*py *.py
+- black --check --verbose main.py
 deploy:
   provider: gae
   keyfile: "EPSI-EDT-9e6b32e76a96.json"
