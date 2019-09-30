@@ -9,8 +9,8 @@ def index(request):
     idUser = request.GET.get("id", "jules.lebris")
     today = date.today()
 
-    url = "https://edtmobiliteng.wigorservices.net//WebPsDyn.aspx?action=posEDTBEECOME&serverid=C&Tel=jules.lebris&date={date}".format(
-        date=today.strftime("%m/%d/%Y")
+    url = "https://edtmobiliteng.wigorservices.net//WebPsDyn.aspx?action=posEDTBEECOME&serverid=C&Tel={idUser}&date={date}".format(
+        idUser=idUser, date=today.strftime("%m/%d/%Y")
     )
 
     return redirect(url)
