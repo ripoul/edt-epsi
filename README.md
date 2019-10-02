@@ -5,6 +5,8 @@
 
 > redirect to the epsi schedule of the day
 
+To use it, go to http://edt.ripoul.fr/[your_username]
+
 ### 🏠 [Homepage](http://edt.ripoul.fr)
 
 ## Install
