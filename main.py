@@ -4,8 +4,8 @@ from flask import Flask, escape, request, redirect
 app = Flask(__name__)
 
 
-@app.route('/', defaults={'user_id': "jules.lebris"})
-@app.route('/<user_id>')
+@app.route("/", defaults={"user_id": "jules.lebris"})
+@app.route("/<user_id>")
 def index(user_id):
     today = date.today()
 
@@ -14,6 +14,7 @@ def index(user_id):
     )
 
     return redirect(url)
+
 
 if __name__ == "__main__":
     # This is used when running locally only. When deploying to Google App
